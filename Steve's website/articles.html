@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stay Fit - Home</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This website is for people who want to educate themselves on how to stay fit in life..">
+    <meta name="author" content="Stay Fit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="refresh" content="600">
+    <meta name="keywords" content="Fit Healthy Diet Exercise Gym ">
+
+    <link href="rsc/css/Style.css" rel="stylesheet">
+    
+    <script src="rsc/js/jquery-3.5.1.js"></script>
+    <script src="rsc/js/main.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <!--For searching articles, some code adopted from [2]-->
+    <div id="searchBar">
+      <input type="text" id="searchInput" onkeyup="searchFunc()" placeholder="Search for articles..">
+      <ul id="preArticleUL">
+        <li><a href="article1.html">
+          <h2 class="articleT">Top 5 types of diet for fat burn in 2021</h2></a></li>
+        <li><a href="article2.html">
+          <h2 class="articleT">Diet that keeps you energized throughout your day</h2></a></li>
+        <li><a href="article3.html">
+          <h2 class="articleT">Simple exercises that gets you abs in no time</h2></a></li>
+        <li><a href="article4.html">
+          <h2 class="articleT">Tips to help you maximise your gym time</h2></a></li>
+        <li><a href="article5.html">
+          <h2 class="articleT">Managable exercises and habits to keep your body fit and healthy</h2></a></li>
+      </ul>
+<script>
+function searchFunc() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("preArticleUL");
+    li = ul.getElementsByTagName("li");
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+    </div>
+  </body>
+  <footer>
+  <div id="footer"></div>
+  </footer>
+  <script src="rsc/js/data.js"></script>
+</html>

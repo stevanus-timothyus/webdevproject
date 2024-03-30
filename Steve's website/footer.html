@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="rsc/css/Style.css" rel="stylesheet">
+  </head>
+  <!--Extra functionality and general footer-->
+  <footer>
+    <div id="footer">
+      <div id="contacts-container">
+        <div id="contacts">
+          <h4 class = "mid">Contacts</h4>
+          <img href="#" src="rsc/img/contactInsta.png">
+          <img src="rsc/img/contactTele.png">
+          <img src="rsc/img/contactTwit.png">
+        </div>
+      </div>
+      
+      <div id="subcription">
+        <h4>Newsletter Subcription</h4>
+        <input type="email" placeholder="Enter email" name="uname" required>
+      </div>
+    </div>
+    <div id="scrollBar"></div>
+    <style>
+      #scrollBar {
+        border-bottom: 2px solid green;
+        width:0;
+        position:fixed;
+        top:0;
+        left:0;
+      }
+    </style>
+    <script>
+      var sbar = document.getElementById("scrollBar");
+      window.addEventListener("scroll", function(){
+        sbar.style.width = pageYOffset;
+      })
+    </script>
+  </footer>
+</html>
